@@ -53,6 +53,10 @@ const useTags = () => {
     const addTag = () => {
         const tagName = window.prompt('请输入标签名称')
         if (tagName !== null && tagName !== '') {
+            if(tagName.length>16){
+                alert('标签名称过长，请重新输入')
+                return 
+            }
             const { name } = tags.filter(t => t.name === tagName)[0] ||''
             if (tagName === name) {
                 alert('该标签已存在,请重新输入')
