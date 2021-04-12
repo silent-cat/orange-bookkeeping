@@ -11,7 +11,7 @@ display:flex;
 flex-direction:column;
 `
 const CategoryWrapper = styled.div`
-background-color: #c4c4c4;
+background-color: #ebedf3;
 `
 const defaultFormData = {
     tagIds: [] as number[],
@@ -42,14 +42,10 @@ function Money() {
     }
     return (
         <MyLayout scrollTop={9999}>
-            {selected.tagIds}
-            <hr />
-            {selected.note}
             <TagsSection value={selected.tagIds} onChange={tagIds => onChange({ tagIds })} />
             <NoteSection value={selected.note} onChange={note => { onChange({ note }) }} />
             <CategoryWrapper><CategorySection value={selected.category} onChange={category => { onChange({ category }) }} /></CategoryWrapper>
-            <NumberPadSection value={selected.amount} onChange={amount => { onChange({ amount }) }} onOK={submit}
-            />
+            <NumberPadSection value={selected.amount} onChange={amount => { onChange({ amount }) }} onOK={submit}/>
         </MyLayout>
     )
 }

@@ -23,7 +23,7 @@ const Input: React.FC<Props> = (props) => {
     return (
         <Label>
             <span></span>
-            <input {...rest} />
+            <input {...rest} autoFocus/>
         </Label>
     )
 }

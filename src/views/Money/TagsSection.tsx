@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import classnames from 'classnames'
 import React, { } from 'react'
 import { useTags } from 'hooks/useTags'
 const Wrapper = styled.section`
@@ -12,14 +13,17 @@ align-items:flex-start;
 >ol{
     margin:0 -12px;
     >li{
-        background-color:#d9d9d9;
+        color:#b9b9b9;
+        background-color:#f7f7f7;
         display:inline-block;
-        border-radius:12px;
+        border-radius:6px;
         padding:4px 18px;
         font-size:14px;
         margin: 8px 12px;
+        max-width:90vw;
         &.selected{
-            background-color: red;
+            background-color: #f45e5d;
+            color:#fff;
         }
     }
 }
@@ -55,8 +59,8 @@ const TagsSection: React.FunctionComponent<Props> = (props) => {
         <Wrapper>
             <ol>
                 {tags.map(tag =>
-                    <li key={tag.id} onClick={() => onToggleTag(tag.id)} className={getClass(tag.id)}>{tag.name}</li>)}
-            </ol>
+                    <li key={tag.id} onClick={() => onToggleTag(tag.id)} className={classnames('ellipsis',getClass(tag.id))}>{tag.name}</li>)}
+            </ol>                                                        
             
             <button onClick={addTag}>新增标签</button>
         </Wrapper>

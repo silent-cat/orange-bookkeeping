@@ -6,7 +6,7 @@ type Props = {
     value: number,
     onChange: (value: number) => void
     onOK?: () => void
-}
+} 
 const NumberPadSection: React.FC<Props> = (props) => {
     const [output, _setOutput] = useState(props.value.toString())
     const setOutput = (output: string) => {
