@@ -26,47 +26,12 @@ const NumberPadSection: React.FC<Props> = (props) => {
         if (text === null) {
             return
         }
-        if (text === 'OK') {
+        if (text === '确定') {
             props.onOK && props.onOK()
         }
-        if ('0123456789.'.split('').concat(['删除', '清空']).indexOf(text) >= -1) {
+        if ('0123456789.'.split('').concat(['删除', '清零']).indexOf(text) >= -1) {
             setOutput(generateOutput(text, output))
         }
-        // switch (text) {
-        //     case '0':
-        //     case '1':
-        //     case '2':
-        //     case '3':
-        //     case '4':
-        //     case '5':
-        //     case '6':
-        //     case '7':
-        //     case '8':
-        //     case '9':
-        //         if(output==='0'){
-        //             setOutput(text)
-        //         }else{
-        //             setOutput(output+text)
-        //         }
-        //         break
-        //     case '删除':
-        //         if(output.length===1){
-        //             setOutput('')
-        //         }else{
-        //             setOutput(output.slice(0,-1))
-        //         }
-        //         break
-        //     case '清空':
-        //         setOutput('')
-        //         break
-        //     case '.':
-        //         if(output.includes('.')){return}
-        //         setOutput(output+'.')
-        //         break;
-        //     case 'OK':
-        //         break
-        // }
-
     }
     return (
         <Wrapper>
@@ -79,11 +44,11 @@ const NumberPadSection: React.FC<Props> = (props) => {
                 <button>4</button>
                 <button>5</button>
                 <button>6</button>
-                <button>清空</button>
+                <button className="ok">确定</button>
                 <button>7</button>
                 <button>8</button>
                 <button>9</button>
-                <button className="ok">OK</button>
+                <button>清零</button>
                 <button className="zero">0</button>
                 <button>.</button>
             </div>

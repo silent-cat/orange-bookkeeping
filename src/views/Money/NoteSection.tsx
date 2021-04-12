@@ -20,7 +20,7 @@ const NoteSection: React.FC<Props> = (props) => {
         <Wrapper>
             <Input
                 label="备注"
-                placeholder="请输入备注"
+                placeholder="添加备注"
                 value={note}
                 onChange={onChange} />
         </Wrapper>

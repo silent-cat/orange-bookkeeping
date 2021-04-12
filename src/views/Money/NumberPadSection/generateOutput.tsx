@@ -1,4 +1,4 @@
-// type InputString = '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '0' | '.' | '删除' | '清空'
+// type InputString = '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '0' | '.' | '删除' | '清零'
 const generateOutput = (text: string, output = "0") => {
     switch (text) {
         case '0':
@@ -22,10 +22,10 @@ const generateOutput = (text: string, output = "0") => {
             } else {
                 return output.slice(0, -1) || ''
             }
-        case '清空':
+        case '清零':
             return ''
         case '.':
-            if (output.includes('.')) { return output}
+            if (output.includes('.')) { return output }
             return output + '.'
         default:
             return ''

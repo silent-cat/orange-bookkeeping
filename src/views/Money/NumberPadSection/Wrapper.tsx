@@ -14,15 +14,14 @@ const Wrapper = styled.section`
         width:25%;
         height:64px;
         border:1px solid #fff;
+        background-color: #eaedf2;
+        font-size:16px;
         &.ok{
             float:right;
-            height:128px;
-        }
-        &.zero{
-            width:50%;
+            height:192px;
         }
     }
 }
 `
 
-export {Wrapper}
+export { Wrapper }

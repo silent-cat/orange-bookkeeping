@@ -5,10 +5,10 @@ const Label = styled.label`
     display:flex;
     align-items:center;
     >span{
-        margin-right:16px;
+        /* margin-right:16px; */
     }
     >input{
-        height:44px;
+        height:36px;
         border:none;
         background:none;
         flex:1;
@@ -16,13 +16,13 @@ const Label = styled.label`
 `
 
 type Props = {
-    label:string
+    label?:string
 } & React.InputHTMLAttributes<HTMLInputElement>
 const Input: React.FC<Props> = (props) => {
     const {label,children,...rest} = props
     return (
         <Label>
-            <span>备注</span>
+            <span></span>
             <input {...rest} />
         </Label>
     )
