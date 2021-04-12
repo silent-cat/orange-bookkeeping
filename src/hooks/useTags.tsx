@@ -53,12 +53,17 @@ const useTags = () => {
     const addTag = () => {
         const tagName = window.prompt('请输入标签名称')
         if (tagName !== null && tagName !== '') {
+            const { name } = tags.filter(t => t.name === tagName)[0] ||''
+            if (tagName === name) {
+                alert('该标签已存在,请重新输入')
+                return
+            }
             setTags([...tags, { id: createId(), name: tagName }])
         }
     }
-    const getName = (id:number)=>{
-        const tag = tags.filter(t=>t.id===id)[0]
-        return tag?tag.name:''
+    const getName = (id: number) => {
+        const tag = tags.filter(t => t.id === id)[0]
+        return tag ? tag.name : ''
     }
     return {
         tags,

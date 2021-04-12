@@ -2,9 +2,11 @@ import styled from 'styled-components'
 import React, { ChangeEventHandler } from 'react'
 import Input from 'components/Input'
 const Wrapper = styled.section`
-background:#f5f5f5;
+background:#fff;
 padding:12px 16px;
 font-size:14px;
+box-shadow:inset 0 -5px 5px -5px rgba(0,0,0,.25),
+               inset 0 5px 5px -5px rgba(0,0,0,.25);
 `
 type Props = {
     value: string

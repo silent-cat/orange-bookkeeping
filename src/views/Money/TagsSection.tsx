@@ -44,8 +44,6 @@ type Props = {
 const TagsSection: React.FunctionComponent<Props> = (props) => {
     const {tags,addTag} = useTags()
     const selectedTagIds = props.value
-
-
     const onToggleTag = (tagId: number) => {
         const index = selectedTagIds.indexOf(tagId)
         if (index >= 0) {
