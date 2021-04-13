@@ -17,10 +17,10 @@ box-shadow:0 0 3px rgba(0,0,0,.3);
       align-items:center;
 
       &.selected{
-      color:red;
+      color:#f45e5d;
       }
       &.icon{
-        fill:red;
+        fill:#f45e5d;
       }
     }
 

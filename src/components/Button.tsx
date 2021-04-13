@@ -3,7 +3,8 @@ const Button = styled.button`
 font-size:18px;
 color:#fff;
 padding:12px 16px;
-background-color: orange;
+background-color: #f45e5d;
+border-radius:6px;
 border:none;
 margin-left:50%;
 margin-top:24px;

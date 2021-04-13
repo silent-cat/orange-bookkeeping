@@ -31,7 +31,7 @@ const Tags = function Tags() {
                 {tags.map(tag =>
                     <li key={tag.id}>
                         <Link to={`/tags/${tag.id}`}>
-                            <span className="ellipsis">{tag.id}:{tag.name}</span>
+                            <span className="ellipsis">{tag.name}</span>
                             <Icon name="right" />
                         </Link>
                     </li>

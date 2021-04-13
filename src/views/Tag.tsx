@@ -54,7 +54,7 @@ const Tag: React.FC = () => {
 
     const tagDeleted = (
         <Deleted>
-            tag不存在
+            标签已被删除
         </Deleted>
     )
     const history = useHistory()
